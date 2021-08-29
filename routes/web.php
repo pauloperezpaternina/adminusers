@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('usuarios.listar');
 });
+Route::get('/form','UserController@userform');
