@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function list(){
+        $data['users']=Usuario::paginate(3);
+        return view('usuarios.list', $data);
+    }
     public function userform(){
         return view('usuarios.userform');
     }

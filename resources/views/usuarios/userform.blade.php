@@ -21,7 +21,7 @@
                 </ul>
             </div>
             @endif
-
+            <a class="btn btn-success mb-4" href="{{url('/')}}"><-</a>
             <div class="card">
                 <form action="{{route('save')}}" method="POST">
                     @CSRF
@@ -37,7 +37,7 @@
                                 <input type="text" name="email" class="form-control col-md-9">
                                 
                             </div>
-                            <div class="row form-group">
+                            <div class="row form-group mt-4">
                                 <button type="submit" class="btn btn-success col-md-9 offset-2">
                                     Guardar
                                 </button>

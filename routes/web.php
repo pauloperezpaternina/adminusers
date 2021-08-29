@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('usuarios.listar');
-});
+Route::get('/','UserController@list')->name('list');
 Route::get('/form','UserController@userform');
 Route::post('/save','UserController@save')->name('save');
