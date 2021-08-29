@@ -129,8 +129,16 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nombre' => [
+            'required' => 'El nombre es requerido',
+            'string' => 'nombre solo texto',
+            'max:255' => 'nombre muy largo',
+        ],
+        'email' => [
+            'required' => 'El email es requerido',
+            'string' => 'formato de email',
+            'max:255' => 'email muy largo',
+            'email' => 'formato de correo incorrecto',
         ],
     ],
 

@@ -2,8 +2,29 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-7 mt-5">
+            <!-- Mensaje Flash -->
+            @if(session('usuarioGuardado'))
+            <div class="alert alert-success">
+                {{session('usuarioGuardado')}}
+            </div>
+            @endif
+            <!-- Validando errorres de formulario -->
+
+            @if($errors->any())
+
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                    @endforeach
+
+                </ul>
+            </div>
+            @endif
+
             <div class="card">
-                <form action="" method="POST">
+                <form action="{{route('save')}}" method="POST">
+                    @CSRF
                     <div class="card-header text-center">Agregar Usuario</div>
                         <div class="card-body">
                             <div class="row form-group">

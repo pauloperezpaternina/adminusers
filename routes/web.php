@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('usuarios.listar');
 });
 Route::get('/form','UserController@userform');
+Route::post('/save','UserController@save')->name('save');
