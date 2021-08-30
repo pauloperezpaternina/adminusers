@@ -14,3 +14,5 @@ Route::get('/','UserController@list')->name('list');
 Route::get('/form','UserController@userform');
 Route::post('/save','UserController@save')->name('save');
 Route::delete('/delete/{id}','UserController@delete')->name('delete');
+Route::get('/editform/{id}','UserController@editform')->name('editform');
+Route::patch('/edit/{id}','UserController@edit')->name('edit');
