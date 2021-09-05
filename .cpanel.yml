@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bittroni/adminusuarios.bittronic.net/
+    - /bin/rsync -a
